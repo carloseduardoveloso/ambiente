@@ -1,2 +1,2 @@
 # ambiente
-criacao de ambiente para testes
+criacao de ambiente para testes com mysql
