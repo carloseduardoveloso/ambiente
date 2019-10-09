@@ -1,0 +1,32 @@
+---
+- hosts: teste
+  become: yes
+  
+  handlers:
+  - name: restart mysql
+    service:
+      name: mysql
+      state: restarted
+     
+  tasks:
+  - name: 'Instalacao basica'
+    package:
+        state: latest
+        name: ["mysql-server", "python3-mysqldb"]
+        use: apt
+  
+  - name: 'Criar usuario no MySQL'
+    mysql_user:
+      name: cesv
+      password: agoravai@2019
+      priv: '*.*:ALL'
+      host: '%'
+      state: present
+
+  - name: 'Configurar MySql para receber conexões'
+    replace:
+      path: /etc/mysql/mysql.conf.d/mysqld.cnf
+      regexp: '127.0.0.1'
+      replace: "0.0.0.0"    
+    notify:
+    - restart mysql
