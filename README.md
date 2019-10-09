@@ -1,2 +1,2 @@
 # ambiente
-criacao de ambiente para testes com mysql
+criacao de ambiente com vagrant e ansible para testes com mysql-server-5.7
