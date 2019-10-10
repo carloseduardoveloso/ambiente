@@ -17,8 +17,8 @@
 
   - name: 'Create user MySQL'
     mysql_user:
-      name: cesv
-      password: agoravai@2019
+      name: usuario
+      password: SenhaSenha
       priv: '*.*:ALL'
       host: '%'
       state: present
