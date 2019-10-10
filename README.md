@@ -13,14 +13,16 @@ Para utilização deste ambiente:
     
     ansible/hosts
 
-3 - verifique usuário e senha no arquivo ansible/mysql57.playbook.yml nos campos name e password
+3 - vagrant up
 
-4 - vagrant up
+4 - esperar o ambiente ficar pronto
 
-5 - esperar o ambiente ficar pronto
+5 - abrir o workbanch e colocar as credenciais 
+    
+      Ip que configurou nos arquivos acima
+      name: usuario
+      password: SenhaSenha
 
-6 - abrir o workbanch e colocar o IP, usuário e senha corretos
-
-7 - pronto
+6 - pronto
 
 
